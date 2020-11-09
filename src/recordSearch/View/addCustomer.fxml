@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recordSearch.Controller.AddCustomerController">
+   <children>
+      <GridPane layoutX="83.0" layoutY="51.0" prefHeight="349.0" prefWidth="644.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Customer Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Address" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Phone Number" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerNameField" GridPane.columnIndex="1" />
+            <TextField fx:id="customerAddressField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="customerAddress2Field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="customerPostalField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="customerPhoneField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="customerCityField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="customerCountryField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Address 2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label text="Postal Code" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label text="City" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label text="Country" GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children>
+      </GridPane>
+      <HBox layoutX="365.0" layoutY="467.0" prefHeight="100.0" prefWidth="404.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleNewCustomer" prefHeight="105.0" prefWidth="154.0" text="Save" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="105.0" prefWidth="154.0" text="Cancel" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="41.0" prefWidth="276.0" text="Add Customer Record">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="customerIsActive" layoutX="607.0" layoutY="400.0" mnemonicParsing="false" text="Customer is Active" />
+   </children>
+</AnchorPane>

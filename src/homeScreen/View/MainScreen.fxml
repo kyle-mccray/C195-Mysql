@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeScreen.Conrtoller.MainScreenController">
+   <children>
+      <VBox layoutX="38.0" layoutY="174.0" prefHeight="503.0" prefWidth="174.0" spacing="10.0">
+         <children>
+            <ToggleButton mnemonicParsing="false" onAction="#handleAppointmentsByWeek" prefHeight="75.0" prefWidth="259.0" text="Appointments By Week" textAlignment="CENTER" wrapText="true">
+               <toggleGroup>
+                  <ToggleGroup fx:id="mainGroup"> </ToggleGroup>
+               </toggleGroup>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleAppointmentsByMonth" prefHeight="75.0" prefWidth="259.0" text="Appointments By Month" textAlignment="CENTER" toggleGroup="$mainGroup" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleReports" prefHeight="75.0" prefWidth="259.0" text="Reports" toggleGroup="$mainGroup">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleCustomerSearch" prefHeight="75.0" prefWidth="259.0" text="Customer Search" textAlignment="CENTER" toggleGroup="$mainGroup" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
+
+         </children>
+      </VBox>
+      <Label layoutX="386.0" layoutY="174.0" prefHeight="249.0" prefWidth="747.0" text="Welcome to the applicaiton ">
+         <font>
+            <Font size="56.0" />
+         </font>
+      </Label>
+      <Button layoutX="979.0" layoutY="629.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="48.0" prefWidth="182.0" text="Close" />
+   </children>
+</AnchorPane>

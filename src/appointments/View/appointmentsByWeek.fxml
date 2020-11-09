@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appointments.Controller.AppointmentsByWeekController">
+   <children>
+      <VBox layoutX="38.0" layoutY="174.0" prefHeight="503.0" prefWidth="174.0" spacing="10.0">
+         <children>
+            <ToggleButton mnemonicParsing="false" onAction="#handleMainScreen" prefHeight="75.0" prefWidth="259.0" selected="true" text="Appointments By Week" textAlignment="CENTER" wrapText="true">
+               <toggleGroup>
+                  <ToggleGroup fx:id="mainGroup"> </ToggleGroup>
+               </toggleGroup>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleAppByMonth" prefHeight="75.0" prefWidth="259.0" text="Appointments By Month" textAlignment="CENTER" toggleGroup="$mainGroup" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleReports" prefHeight="75.0" prefWidth="259.0" text="Reports" toggleGroup="$mainGroup">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleCustomerSearch" prefHeight="75.0" prefWidth="259.0" text="Customer Search" textAlignment="CENTER" toggleGroup="$mainGroup" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </VBox>
+      <TableView fx:id="myTable" layoutX="249.0" layoutY="174.0" prefHeight="418.0" prefWidth="990.0">
+        <columns>
+            <TableColumn fx:id="sundayAppointmentsCol" prefWidth="142.0" text="Numer for Sunday" />
+          <TableColumn fx:id="mondayAppointmentsCol" prefWidth="142.0" text="Numer for Monday" />
+            <TableColumn fx:id="tuesdayAppointmentsCol" prefWidth="142.0" text="Numer for Tuesday" />
+            <TableColumn fx:id="wednesdayAppointmentsCol" prefWidth="142.0" text="Numer for Wednesday" />
+            <TableColumn fx:id="thursdayAppointmentsCol" prefWidth="142.0" text="Numer for Thrusday" />
+            <TableColumn fx:id="fridayAppointmentsCol" prefWidth="142.0" text="Numer for Friday" />
+            <TableColumn fx:id="saturdayAppointmentsCol" prefWidth="142.0" text="Numer for Saturday" />
+        </columns>
+      </TableView>
+      <HBox layoutX="249.0" layoutY="139.0" prefHeight="35.0" prefWidth="990.0">
+         <children>
+            <Label alignment="CENTER" layoutX="730.0" layoutY="10.0" prefHeight="39.0" prefWidth="144.0" text="Sunday" />
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="144.0" text="Monday" />
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="144.0" text="Tuesday" />
+            <Label alignment="CENTER" layoutX="154.0" layoutY="10.0" prefHeight="39.0" prefWidth="144.0" text="Wednesday" />
+            <Label alignment="CENTER" layoutX="298.0" layoutY="10.0" prefHeight="39.0" prefWidth="144.0" text="Thrusday" />
+            <Label alignment="CENTER" layoutX="442.0" layoutY="10.0" prefHeight="39.0" prefWidth="144.0" text="Friday" />
+            <Label alignment="CENTER" layoutX="586.0" layoutY="10.0" prefHeight="39.0" prefWidth="144.0" text="Saturday" />
+         </children>
+      </HBox>
+      <HBox layoutX="249.0" layoutY="100.0" prefHeight="24.0" prefWidth="451.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleLastWeek" prefHeight="102.0" prefWidth="91.0" text="&lt;-" />
+            <Label fx:id="monthLabel" alignment="CENTER" prefHeight="53.0" prefWidth="280.0" text="Month " />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleNextWeek" prefHeight="102.0" prefWidth="91.0" text="-&gt;" />
+         </children>
+      </HBox>
+      <Separator layoutX="249.0" layoutY="138.0" prefHeight="5.0" prefWidth="990.0" />
+      <HBox layoutX="794.0" layoutY="617.0" prefHeight="75.0" prefWidth="445.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleNewAppointment" prefHeight="103.0" prefWidth="176.0" text="Add Appointment" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleModAppointment" prefHeight="103.0" prefWidth="176.0" text="Modify Selected Appointment" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="186.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleDeleteAppointment" prefHeight="103.0" prefWidth="176.0" text="Delete Selected Appointment" textAlignment="CENTER" wrapText="true" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recordSearch.Controller.SearchCustomerController">
+   <children>
+      <VBox layoutX="38.0" layoutY="174.0" prefHeight="503.0" prefWidth="174.0" spacing="10.0">
+         <children>
+            <ToggleButton mnemonicParsing="false" onAction="#handleAppByWeek" prefHeight="75.0" prefWidth="259.0" text="Appointments By Week" textAlignment="CENTER" wrapText="true">
+               <toggleGroup>
+                  <ToggleGroup fx:id="mainGroup"> </ToggleGroup>
+               </toggleGroup>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleAppByMonth" prefHeight="75.0" prefWidth="259.0" text="Appointments By Month" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <toggleGroup>
+                  <fx:reference source="mainGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleReports" prefHeight="75.0" prefWidth="259.0" text="Reports">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <toggleGroup>
+                  <fx:reference source="mainGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleMainScreen" prefHeight="75.0" prefWidth="259.0" selected="true" text="Customer Search" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <toggleGroup>
+                  <fx:reference source="mainGroup" />
+               </toggleGroup>
+            </ToggleButton>
+
+         </children>
+      </VBox>
+      <TableView fx:id="customerTableView" layoutX="281.0" layoutY="174.0" prefHeight="423.0" prefWidth="958.0">
+        <columns>
+          <TableColumn fx:id="customerNameCol" prefWidth="320.0" text="Customer Name" />
+            <TableColumn fx:id="customerAddressCol" prefWidth="320.0" text="Address " />
+            <TableColumn fx:id="customerPhoneCol" prefWidth="320.0" text="Phone Number" />
+        </columns>
+      </TableView>
+      <HBox layoutX="815.0" layoutY="606.0" prefHeight="100.0" prefWidth="424.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleAddCustomer" prefHeight="102.0" prefWidth="110.0" text="Add Customer Record" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleModifyCustomer" prefHeight="102.0" prefWidth="110.0" text="Modify Selected Customer Record" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="120.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleDeleteCustomer" prefHeight="102.0" prefWidth="110.0" text="Delete Selected Customer Record" textAlignment="CENTER" wrapText="true" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <TextField fx:id="searchCustomerField" layoutX="281.0" layoutY="138.0" prefHeight="17.0" prefWidth="334.0" promptText="Search by First Name, Last Name, Adress, or Phone Number" />
+   </children>
+</AnchorPane>
